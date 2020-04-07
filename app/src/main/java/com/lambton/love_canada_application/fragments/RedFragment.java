@@ -42,14 +42,14 @@ public class RedFragment extends Fragment {
 
 
         FragmentViewActivity fragObject = (FragmentViewActivity) getActivity();
-            fragObject.toastString = "Activity: From Fragment";
+            fragObject.toastString = "Activity: From Red Fragment";
 
-        titleText = view.findViewById(R.id.titleId);
-        fragmentBtn = view.findViewById(R.id.fragmentButton);
+        titleText = view.findViewById(R.id.titleIdGreen);
+        fragmentBtn = view.findViewById(R.id.fragmentButtonGreen);
         fragmentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Fragment", Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(), "Fragment Red", Toast.LENGTH_SHORT).show();
             }
         });
         titleText.setText("I am Red Title");
