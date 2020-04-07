@@ -40,7 +40,7 @@ public class CanadaAttractionAdapter extends RecyclerView.Adapter<CanadaAttracti
             @Override
             public void onClick(View v) {
                 CanadaAttraction name = canadaAttractionArrayList.get(position);
-                Toast.makeText(holder.itemView.getContext(), "Name: "+name.getPlaceName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(holder.itemView.getContext(), "Address: "+name.getAddress(), Toast.LENGTH_SHORT).show();
             }
         });
     }
