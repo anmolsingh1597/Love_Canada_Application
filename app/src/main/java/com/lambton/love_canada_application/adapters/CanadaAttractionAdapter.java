@@ -1,5 +1,7 @@
 package com.lambton.love_canada_application.adapters;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +12,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.lambton.love_canada_application.AttractionDetailsActivity;
 import com.lambton.love_canada_application.R;
 import com.lambton.love_canada_application.models.CanadaAttraction;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class CanadaAttractionAdapter extends RecyclerView.Adapter<CanadaAttractionAdapter.CanadaViewHolder> {
@@ -40,7 +44,12 @@ public class CanadaAttractionAdapter extends RecyclerView.Adapter<CanadaAttracti
             @Override
             public void onClick(View v) {
                 CanadaAttraction name = canadaAttractionArrayList.get(position);
-                Toast.makeText(holder.itemView.getContext(), "Address: "+name.getAddress(), Toast.LENGTH_SHORT).show();
+                Bundle attractionBundle = new Bundle();
+                attractionBundle.putSerializable("detailsObject", (Serializable) name);
+                Intent detailsIntent = new Intent(holder.itemView.getContext(), AttractionDetailsActivity.class);
+                detailsIntent.putExtra("object", attractionBundle);
+                holder.itemView.getContext().startActivity(detailsIntent);
+
             }
         });
     }

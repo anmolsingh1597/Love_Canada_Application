@@ -1,6 +1,8 @@
 package com.lambton.love_canada_application.models;
 
-public class CanadaAttraction {
+import java.io.Serializable;
+
+public class CanadaAttraction implements Serializable {
 
     private int placeId;
     private String placeName;
