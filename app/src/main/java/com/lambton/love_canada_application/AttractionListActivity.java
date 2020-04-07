@@ -23,7 +23,7 @@ public class AttractionListActivity extends AppCompatActivity {
         intials();
     }
     public void intials(){
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
         canadaAttractionListView = findViewById(R.id.rvAttractionList);
         populateAttractions();

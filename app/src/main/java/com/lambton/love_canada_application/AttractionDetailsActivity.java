@@ -28,7 +28,7 @@ public class AttractionDetailsActivity extends AppCompatActivity {
         intials();
     }
     public void intials(){
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
         Intent intent = getIntent();
         fetchedUser = intent.getBundleExtra("object");
         object = (CanadaAttraction) fetchedUser.getSerializable("detailsObject");
