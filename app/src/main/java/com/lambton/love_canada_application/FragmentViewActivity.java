@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -41,6 +42,8 @@ public class FragmentViewActivity extends AppCompatActivity {
 
     public void buttonClick(View view){
         Toast.makeText(FragmentViewActivity.this, toastString, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(FragmentViewActivity.this, SplashActivity.class);
+        startActivity(intent);
     }
 
     @Override
